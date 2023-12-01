@@ -9,9 +9,13 @@ namespace Consuming_External_APIS_Task.Controllers
 {
     public class CommentsController
     {
+        PostsController postsController = new PostsController();
         CommentServices commentServices = new CommentServices();    
         public async Task getComments()
         {
+            await postsController.getPosts();
+            await Console.Out.WriteLineAsync("Select Post ID");
+            var postid = Console.ReadLine();
             var comments = await commentServices.GetCommentsAsync();
             Console.WriteLine($"Comment Id \t Post ID \t Email \t Name\t Body");
             foreach (var comment in comments)
