@@ -13,12 +13,11 @@ namespace Consuming_External_APIS_Task.Controllers
         public async Task getPosts()
         {
             var posts = await postServices.GetPostsAsync();
-            Console.WriteLine($"Id \t Name \t Username \t Email");
+            Console.WriteLine($"Post Id \t User Id \t Post Title \t Post Body");
             foreach (var post in posts)
             {
                 Console.WriteLine($" {post.Id} \t {post.userID} \t {post.Title} \t {post.Body}");
             }
-
         }
     }
 }

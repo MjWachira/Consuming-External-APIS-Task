@@ -8,7 +8,10 @@ CommentsController commentsController = new CommentsController();
 
 
 
-
+Console.WriteLine("Choose an option:");
+Console.WriteLine("1. Display Users");
+Console.WriteLine("2. Display Posts");
+Console.WriteLine("3. Display Comments");
 
 
 switch (Console.ReadLine())

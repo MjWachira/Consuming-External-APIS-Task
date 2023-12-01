@@ -13,12 +13,13 @@ namespace Consuming_External_APIS_Task.Controllers
         public async Task getComments()
         {
             var comments = await commentServices.GetCommentsAsync();
-            Console.WriteLine($"Id \t Name \t Username \t Email");
+            Console.WriteLine($"Comment Id \t Post ID \t Email \t Name\t Body");
             foreach (var comment in comments)
             {
                 Console.WriteLine($" {comment.Id} \t {comment.PostID} " +
                     $"\t {comment.Email} \t {comment.Name}\t {comment.Body}");
             }
+
 
         }
     }
